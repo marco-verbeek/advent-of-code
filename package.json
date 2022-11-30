@@ -1,0 +1,24 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Repository containing my AoC solutions",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "sh scripts/test.sh",
+    "send": "sh scripts/send.sh"
+  },
+  "keywords": [
+    "aoc",
+    "2022"
+  ],
+  "author": "Marco VERBEEK",
+  "license": "ISC",
+  "dependencies": {
+    "advent-of-code-client": "^0.2.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
