@@ -5,7 +5,7 @@ if (!year || !day) {
   throw new Error("Must provide year and day to send result");
 }
 
-import { AocClient, transforms } from "advent-of-code-client";
+import { AocClient } from "advent-of-code-client";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -16,6 +16,6 @@ const client = new AocClient({
   day,
   token: process.env.AOC_TOKEN,
 });
-client.setInputTransform(transforms.numbers);
+client.setInputTransform(transforms.lines);
 
 await client.run([part1, part2]);
