@@ -5,7 +5,7 @@ if (!year || !day) {
   throw new Error("Must provide year and day to send result");
 }
 
-import { AocClient } from "advent-of-code-client";
+import { AocClient, transforms } from "advent-of-code-client";
 import * as dotenv from "dotenv";
 dotenv.config();
 
