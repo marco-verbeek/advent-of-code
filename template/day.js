@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const client = new AocClient({
-  year: 2021,
+  year: 2022,
   day: 1,
   token: process.env.AOC_TOKEN,
 });
