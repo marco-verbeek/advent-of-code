@@ -19,28 +19,27 @@ export const part1 = (data) => {
   let cycle = 0,
     x = 1;
 
-  function incrementCycle(amount) {
-    for (let i = 0; i < amount; i++) {
-      cycle++;
+  function incrementCycle() {
+    cycle++;
 
-      if (milestones.includes(cycle)) {
-        console.log(`Milestone ${cycle} * ${x} = ${cycle * x}`);
-        valuesX.push(cycle * x);
-      }
+    if (milestones.includes(cycle)) {
+      console.log(`Milestone ${cycle} * ${x} = ${cycle * x}`);
+      valuesX.push(cycle * x);
     }
   }
 
   for (let idx = 0; idx < data.length + 2; idx++) {
     const cycleElem = data[idx - 2];
     if (!cycleElem || cycleElem === "noop") {
-      incrementCycle(1);
+      incrementCycle();
       continue;
     }
 
     const [, amount] = cycleElem.split(" ");
     x += parseInt(amount);
 
-    incrementCycle(2);
+    incrementCycle();
+    incrementCycle();
   }
 
   return valuesX.reduce((total, current) => total + current, 0);
